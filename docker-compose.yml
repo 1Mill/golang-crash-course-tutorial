@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  go:
+    build: ./
+    volumes:
+      - ./bin:/app/bin
+      - ./src:/app/src
+      - ./pkg:/app/pkg
