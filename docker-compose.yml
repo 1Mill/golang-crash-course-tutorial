@@ -4,6 +4,4 @@ services:
   go:
     build: ./
     volumes:
-      - ./bin:/app/bin
-      - ./src:/app/src
-      - ./pkg:/app/pkg
+      - ./go:/go
