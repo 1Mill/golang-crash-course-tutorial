@@ -18,5 +18,5 @@ func main() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/about", about)
 	fmt.Println("Server starting...")
-	http.ListenAndServe("0.0.0.0:3000", nil)
+	http.ListenAndServe(":3000", nil)
 }

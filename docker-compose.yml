@@ -1,9 +1,14 @@
 version: '3'
 
 services:
-  go:
-    build: ./
+  learning_go:
+    build: ./src/learning_go
     volumes:
-      - ./go:/go
+      - ./src/learning_go/app:/app
+  
+  mux:
+    build: ./src/mux
+    volumes:
+      - ./src/mux/app:/app
     ports:
       - 3000:3000
