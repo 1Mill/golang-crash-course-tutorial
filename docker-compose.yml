@@ -9,6 +9,6 @@ services:
   mux:
     build: ./src/mux
     volumes:
-      - ./src/mux/app:/app
+      - ./src/mux/go:/go
     ports:
-      - 3000:3000
+      - 5000:5000

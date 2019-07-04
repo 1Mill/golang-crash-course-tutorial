@@ -2,10 +2,9 @@ FROM golang:1-alpine
 
 RUN apk update && apk add git
 
-WORKDIR /src
-RUN mkdir /app
-WORKDIR /app
+COPY . /go
 
-COPY . .
+RUN go get github.com/pilu/fresh
 
-CMD [ "go", "run", "main.go" ]
+WORKDIR /go/src/app
+CMD fresh
